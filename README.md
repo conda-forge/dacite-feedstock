@@ -5,11 +5,9 @@ Home: https://github.com/konradhalas/dacite
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dacite-feedstock/blob/master/LICENSE.txt)
 
 Summary: Simple creation of data classes from dictionaries.
-
-
 
 Current build status
 ====================
