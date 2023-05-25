@@ -1,26 +1,26 @@
 {% set name = "dacite" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: d48125ed0a0352d3de9f493bf980038088f45f3f9d7498f090b50a847daaa6df
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 683a1d72c8fa0c0341034ddabc7a5c6f6ddc188033a26784417a9429dd3ffa51
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - dataclasses
   run:
-    - python
+    - python >=3.6
     - dataclasses
 
 test:
@@ -32,12 +32,13 @@ test:
     - pip check
 
 about:
-  home: "https://github.com/konradhalas/dacite"
+  home: https://github.com/konradhalas/dacite
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Simple creation of data classes from dictionaries."
+  summary: Simple creation of data classes from dictionaries.
 
 extra:
   recipe-maintainers:
     - mands
+    - rxm7706
