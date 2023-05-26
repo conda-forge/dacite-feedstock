@@ -1,5 +1,5 @@
 {% set name = "dacite" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 683a1d72c8fa0c0341034ddabc7a5c6f6ddc188033a26784417a9429dd3ffa51
+  sha256: 6257a5e505b61a8cafee7ef3ad08cf32ee9b885718f42395d017e0a9b4c6af65
 
 build:
   noarch: python
