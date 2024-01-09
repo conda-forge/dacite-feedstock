@@ -1,27 +1,25 @@
 {% set name = "dacite" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6257a5e505b61a8cafee7ef3ad08cf32ee9b885718f42395d017e0a9b4c6af65
+  url: https://github.com/konradhalas/dacite/archive/v{{ version }}.tar.gz
+  sha256: 791ac3da85a040684a96df59e2320dc7b3cac000ff536e3f4b00fb3b67520b86
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python >=3.8
     - pip
-    - python >=3.6
-    - dataclasses
   run:
-    - python >=3.6
-    - dataclasses
+    - python >=3.8
 
 test:
   imports:
