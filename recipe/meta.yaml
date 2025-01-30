@@ -1,5 +1,5 @@
 {% set name = "dacite" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/konradhalas/dacite/archive/v{{ version }}.tar.gz
-  sha256: 5e06b2c9447cb978316590c1d51d75b4fd89e210208802d7d00f21408a186089
+  sha256: f8416cb958116f7bc4d36e0d478a56f39fdc6e636d036bd8c6d46b6a218900ed
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
+    - dataclasses
     - python >={{ python_min }}
 
 test:
