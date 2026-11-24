@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.9.2"
+  version: "1.9.3"
 
 package:
   name: dacite
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/dacite/dacite-${{ version }}.tar.gz
-  sha256: 6ccc3b299727c7aa17582f0021f6ae14d5de47c7227932c47fec4cdfefd26f09
+  sha256: 0941c63c6c87eb148cea1560ef65db883a1515bd1440275ad1b9330806ba4be8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
